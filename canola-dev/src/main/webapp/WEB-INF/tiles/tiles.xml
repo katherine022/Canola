@@ -5,21 +5,21 @@
 	
 <tiles-definitions>
 	<!-- base-definition -->
-	<definition name="base-definition" template="/WEB-INF/views/tiles/layouts/defaultLayout.jsp">
-		<put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" />
+	<definition name="base-definition" template="/WEB-INF/tiles/layouts/layout.jsp">
+		<put-attribute name="header" value="/WEB-INF/tiles/layouts/header.jsp" />
 		<put-attribute name="body" value="" />
-		<put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/tiles/layouts/footer.jsp" />
 	</definition>
 	
-	<!-- Home Page -->
-<!--<definition name="home" extends="base-definition">
-		<put-attribute name="body" value="/WEB-INF/views/home.jsp" />
-	</definition>
- -->
- 	
 	<!-- login -->
 	<definition name="login" extends="base-definition">
 		<put-attribute name="body" value="/WEB-INF/views/login.jsp" />
+	</definition>
+	
+	<!-- admin -->
+	<definition name="/open/*" extends="base-definition">
+		<put-attribute name="sidebar" value="/WEB-INF/tiles/layouts/sidebar.jsp" />
+		<put-attribute name="body" value="/WEB-INF/views/opensource/{1}.jsp" />
 	</definition>
 	
 	<!-- .etc -->

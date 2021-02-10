@@ -5,9 +5,8 @@
 <html lang="ko">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<tiles:insertAttribute name="header" />
-<%-- <link href="<c:url value='/resources/css/layout.css' />" rel="stylesheet"></link> --%>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<tiles:insertAttribute name="header" />
 </head>
   
 <body class="wrapper">      
